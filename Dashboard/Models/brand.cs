@@ -5,21 +5,21 @@ using System.Threading.Tasks;
 
 namespace DashBoard.Models
 {
-    public class dataBrand
+    public class DataBrand
     {
-        public List<brand> data { get; set; }
+        public List<Brand> data { get; set; }
 
-        public dataBrand()
+        public DataBrand()
         {
         }
 
-        public dataBrand(List<brand> data)
+        public DataBrand(List<Brand> data)
         {
             this.data = data;
         }
 
     }
-    public class brand
+    public class Brand
     {
         public int position { get; set; }
         public string name { get; set; }
@@ -28,10 +28,10 @@ namespace DashBoard.Models
 
         public string drilldown { get; set; }
 
-        public brand()
+        public Brand()
         {
         }
-        public brand(int position, string name, double y, string drilldown)
+        public Brand(int position, string name, double y, string drilldown)
         {
             this.position = position;
             this.name = name;

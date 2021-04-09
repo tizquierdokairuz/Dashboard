@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace DashBoard.Mock
 {
-    public class bankRepository
+    public class BankRepository
     {
 
-        public List<Bank> GetAllBankList()
+        public List<Bank> getAllBankList()
         {
             List<Bank> list = new List<Bank>();
             list.Add(new Bank("Santander Rio", 36.4, null));

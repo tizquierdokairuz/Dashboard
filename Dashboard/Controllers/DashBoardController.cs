@@ -17,32 +17,32 @@ namespace DashBoard.Controllers
 
         public JsonResult getCreditCardList()
         {
-            creditCardRepository serie = new creditCardRepository();
-            return Json(serie.GetAllCreditCardList());
+            CreditCardRepository serie = new CreditCardRepository();
+            return Json(serie.getAllCreditCardList());
         }
 
         public JsonResult getBankList()
         {
-            bankRepository serie = new bankRepository();
-            return Json(serie.GetAllBankList());
+            BankRepository serie = new BankRepository();
+            return Json(serie.getAllBankList());
         }
 
         public JsonResult getBrandList()
         {
-            brandRepository serie = new brandRepository();
-            return Json(new dataBrand(serie.GetAllBrandList()));
+            BrandRepository serie = new BrandRepository();
+            return Json(new DataBrand(serie.getAllBrandList()));
         }
 
         public JsonResult getOperationList()
         {
-            operationRepository serie = new operationRepository();
-            return Json(serie.GetAllOperationList());
+            OperationRepository serie = new OperationRepository();
+            return Json(serie.getAllOperationList());
         }
 
         public JsonResult getPaymentList()
         {
-            paymentRepository serie = new paymentRepository();
-            return Json(new dataPayment(serie.GetAllPaymentList()));
+            PaymentRepository serie = new PaymentRepository();
+            return Json(new DataPayment(serie.getAllPaymentList()));
         }
     }
 }

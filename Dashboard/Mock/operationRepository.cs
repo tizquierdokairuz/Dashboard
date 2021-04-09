@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace DashBoard.Mock
 {
-    public class operationRepository
+    public class OperationRepository
     {
 
-        public List<operation> GetAllOperationList()
+        public List<Operation> getAllOperationList()
         {
-            List<operation> list = new List<operation>();
+            List<Operation> list = new List<Operation>();
 
             List<double> dataj = new List<double>() { 43000, 19000, 60000, 35000, 17000, 10000 };
             List<double> dataf = new List<double>() { 50000, 39000, 42000, 31000, 26000, 14000 };
 
-            list.Add(new operation("Personas Juridicas", dataj, "on"));
-            list.Add(new operation("Personas Fisicas", dataf, "on"));
+            list.Add(new Operation("Personas Juridicas", dataj, "on"));
+            list.Add(new Operation("Personas Fisicas", dataf, "on"));
 
             return list;
         }

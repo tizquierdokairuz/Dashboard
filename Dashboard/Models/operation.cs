@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace DashBoard.Models
 {
-    public class operation
+    public class Operation
     {
         public string name { get; set; }
 
@@ -13,10 +13,10 @@ namespace DashBoard.Models
 
         public string pointPlacement { get; set; }
 
-        public operation()
+        public Operation()
         {
         }
-        public operation(string name, List<double> data, string pointPlacement)
+        public Operation(string name, List<double> data, string pointPlacement)
         {
             this.name = name;
             this.data = data;

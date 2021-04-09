@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace DashBoard.Models
 {
-    public class creditCard
+    public class CreditCard
     {
         public string name { get; set;}
 
@@ -14,10 +14,10 @@ namespace DashBoard.Models
         public bool sliced { get; set; }
 
         public bool selected { get; set; }
-        public creditCard()
+        public CreditCard()
         {
         }
-        public creditCard(string name, double y, bool sliced = false , bool selected = false)
+        public CreditCard(string name, double y, bool sliced = false , bool selected = false)
         {
             this.name = name;
             this.y = y;

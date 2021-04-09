@@ -5,21 +5,21 @@ using System.Threading.Tasks;
 
 namespace DashBoard.Models
 {
-    public class dataPayment
+    public class DataPayment
     {
-        public List<payment> data { get; set; }
+        public List<Payment> data { get; set; }
 
-        public dataPayment()
+        public DataPayment()
         {
         }
 
-        public dataPayment(List<payment> data)
+        public DataPayment(List<Payment> data)
         {
             this.data = data;
         }
 
     }
-    public class payment
+    public class Payment
     {
         public int position { get; set; }
         public string name { get; set; }
@@ -28,10 +28,10 @@ namespace DashBoard.Models
 
         public string drilldown { get; set; }
 
-        public payment()
+        public Payment()
         {
         }
-        public payment(int position, string name, double y, string drilldown)
+        public Payment(int position, string name, double y, string drilldown)
         {
             this.position = position;
             this.name = name;
