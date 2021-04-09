@@ -1,4 +1,14 @@
 ﻿$(document).ready(function () {
+    ajaxExecuteOL("");
+});
+
+$("#buttonOp").click(function () {
+    ajaxExecuteOL("operations");
+});
+$("#buttonOp2").click(function () {
+    ajaxExecuteOL("lineOperations");
+});
+function ajaxExecuteOL(operations) {
     $.ajax({
         type: "GET",
         contentType: "application/json; charset=utf-8",
@@ -8,11 +18,17 @@
             alert("Error de acceso a datos");
         },
         success: function (data) {
+            if (operations === "operations")
+                graphicOperation(data);
+            else if (operations === "lineOperations")
+                lineOperation(data);
+            else {
             graphicOperation(data);
-            lineOperation(data);
+                lineOperation(data);
+            }
         }
     })
-});
+};
 
 function graphicOperation(data){
     Highcharts.chart('operations', {

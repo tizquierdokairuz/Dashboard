@@ -1,5 +1,16 @@
-﻿
-$(document).ready(function () {
+﻿$(document).ready(function () {
+    ajaxExecuteBL();
+});
+
+$("#buttonBr").click(function () {
+    ajaxExecuteBL();
+});
+
+function ajaxExecuteBL() {
+    if ($.fn.DataTable.isDataTable('#table-brands')) {
+        $('#table-brands').DataTable().destroy();
+    }
+
     $('#table-brands').DataTable({
         "ajax": urlBase + '/getBrandList',
         "columns": [
@@ -8,4 +19,4 @@ $(document).ready(function () {
             { "data": "y" }
         ]
     });
-});
+};

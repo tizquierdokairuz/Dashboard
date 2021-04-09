@@ -1,5 +1,16 @@
-﻿
-$(document).ready(function () {
+﻿$(document).ready(function () {
+    ajaxExecutePL();
+});
+
+$("#buttonPa").click(function () {
+    ajaxExecutePL();
+});
+
+function ajaxExecutePL() {
+    if ($.fn.DataTable.isDataTable('#table-payments')) {
+            $('#table-payments').DataTable().destroy();
+     }
+
     $('#table-payments').DataTable({
         "ajax": urlBase + '/getPaymentList',
         "columns": [
@@ -8,4 +19,4 @@ $(document).ready(function () {
             { "data": "y" }
         ]
     });
-});
+};

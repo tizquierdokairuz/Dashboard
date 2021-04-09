@@ -1,4 +1,12 @@
 ﻿$(document).ready(function () {
+    ajaxExecuteCL();
+});
+
+$("#creditCards").click(function () {
+    ajaxExecuteCL();
+});
+
+function ajaxExecuteCL() {
     $.ajax({
         type: "GET",
         contentType: "application/json; charset=utf-8",
@@ -11,7 +19,7 @@
             graphicBars(data);
         }
     })
-});
+};
 
 function graphicBars(data) {
 Highcharts.chart('creditCards', {
@@ -19,7 +27,7 @@ Highcharts.chart('creditCards', {
         type: 'column'
     },
     title: {
-        text: 'Ranking de tarjetas de crédito 2021'
+        text: 'Ranking de tarjetas de crédito 2021 <br> Toca la imágen para recargar'
     },
     subtitle: {
         text: 'Fuente: <a href="https://www.rankia.com.ar/blog/mejores-plazos-fijos/3447565-mejores-bancos-argentina-2021" target="_blank">Mejores Bancos Argentina 2021</a>'

@@ -3,6 +3,7 @@
     <tr class=contenidos1>
         <td class="celda1">
             <div id="operations"></div>
+            <a id="buttonOp" class="buttonRelg" aria-controls="table-brands" tabindex="0">Recargar</a>
         </td>
     </tr>
 </table>
@@ -15,8 +16,11 @@
             <div>
                 <table id="table-brands">
                 </table>
+                <a id="buttonBr" class="buttonRelt" aria-controls="table-brands" tabindex="1">Recargar</a>
             </div>
+
         </td>
+        
     </tr>
     <tr class=contenidos2>
 
@@ -27,6 +31,7 @@
             <div>
                 <table id="table-payments">
                 </table>
+                <a id="buttonPa" class="buttonRelt" aria-controls="table-brands" tabindex="2">Recargar</a>
             </div>
         </td>
     </tr>
@@ -45,6 +50,7 @@
     <tr class=contenidos3>
         <td class="celda3">
             <div id="lineOperations"></div>
+            <a id="buttonOp2" class="buttonRelg"  aria-controls="table-brands" tabindex="3">Recargar</a>
         </td>
     </tr>
 </table>
@@ -113,7 +119,20 @@
             margin-right: auto;
         }
 
-        .highcharts-data-table table, .dataTable no-footer {
+        .buttonRelt {
+            font-size: 0.3em;
+            color: #555;
+            padding: 0.1em;
+            background: linear-gradient(to bottom, white 0%, #dcdcdc 100%);
+        }
+
+        .buttonRelt {
+            font-size: 0.3em;
+            color: #555;
+            padding: 0.1em;
+            background: linear-gradient(to bottom, white 0%, #dcdcdc 100%);
+        }
+            .highcharts-data-table table, .dataTable no-footer {
             font-family: Verdana, sans-serif;
             border-collapse: collapse;
             border: 1px solid #EBEBEB;

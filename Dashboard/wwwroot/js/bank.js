@@ -1,18 +1,36 @@
 ﻿$(document).ready(function () {
+    ajaxExecuteB("");
+});
+
+$("#banks").click(function () {
+    ajaxExecuteB("banks");
+});
+
+$("#bankDonnut").click(function () {
+    ajaxExecuteB("bankDonnut");
+});
+
+function ajaxExecuteB(banks) {
     $.ajax({
         type: "GET",
         contentType: "application/json; charset=utf-8",
         dataType: "json",
-        url: urlBase +'/getBankList',
+        url: urlBase + '/getBankList',
         error: function () {
             alert("Error de acceso a datos");
         },
         success: function (data) {
-            graphicPie(data);
-            graphicDonnut(data);
+            if (banks ==="bankDonnut")
+                graphicDonnut(data);
+            else if (banks === "banks")
+                graphicPie(data);
+            else {
+                graphicDonnut(data);
+                graphicPie(data);
+            }
         }
     })
-});
+}
 
 function graphicPie(data){
     Highcharts.chart('banks', {
@@ -20,7 +38,7 @@ function graphicPie(data){
             type: 'variablepie'
         },
         title: {
-            text: 'Mejores bancos de Argentina en 2021'
+            text: 'Mejores bancos de Argentina en 2021<br> Toca la imágen para recargar'
         },
         tooltip: {
             headerFormat: '',
@@ -46,7 +64,7 @@ function graphicDonnut(data) {
             plotShadow: false
         },
         title: {
-            text: 'Popularidad<br>Bancos argentinos<br>2021',
+            text: 'Popularidad<br>Bancos argentinos<br>2021 <br> Toca la imágen para recargar',
             align: 'center',
             verticalAlign: 'middle',
             y: 60
