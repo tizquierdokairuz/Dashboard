@@ -1,0 +1,162 @@
+﻿
+<table id=contenedor1>
+    <tr class=contenidos1>
+        <td class="celda1">
+            <div id="operations"></div>
+        </td>
+    </tr>
+</table>
+<table id=contenedor2 class="display-4">
+    <tr class=contenidos2>
+        <td class="celda2">
+            <div id="creditCards"></div>
+        </td>
+        <td class="celda2">
+            <div>
+                <table id="table-brands">
+                </table>
+            </div>
+        </td>
+    </tr>
+    <tr class=contenidos2>
+
+        <td class="celda2">
+            <div id="banks"></div>
+        </td>
+        <td class="celda2">
+            <div>
+                <table id="table-payments">
+                </table>
+            </div>
+        </td>
+    </tr>
+    <tr class=contenidos2>
+        <td class="celda2">
+            <div id="bankDonnut"></div>
+        </td>
+        <td class="celda2">
+            <div><img class="pic" src="@Url.Content("~/pics/1.jpg")" /></div>
+        </td>
+
+
+    </tr>
+</table>
+<table id=contenedor3>
+    <tr class=contenidos3>
+        <td class="celda3">
+            <div id="lineOperations"></div>
+        </td>
+    </tr>
+</table>
+
+
+
+@section Scripts{
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/variable-pie.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/dataTables.jqueryui.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/rowgroup/1.1.2/css/rowGroup.jqueryui.min.css">
+
+    <script>var urlBase = 'http://' +'@Context.Request.Host' +'@Context.Request.Path'</script>
+    <script src="~/js/bank.js"></script>
+    <script src="~/js/creditCard.js"></script>
+    <script src="~/js/brand.js"></script>
+    <script src="~/js/operation.js"></script>
+    <script src="~/js/payment.js"></script>
+
+
+
+
+    <style type="text/css">
+        div.container, main.pb-3 {
+            overflow: hidden;
+            resize: both;
+        }
+
+        #contenedor1 {
+            width: 100%;
+        }
+
+        #contenedor2 {
+            width: 100%;
+        }
+
+        #contenedor3 {
+            width: 100%;
+        }
+
+        #piecont, #bars, #publicidadMacro, #publicidadMacro {
+            resize: both;
+        }
+
+        .highcharts-figure, .highcharts-data-table table, .dataTable no-footer {
+            min-width: 320px;
+            max-width: 800px;
+            margin: 1em auto;
+        }
+
+        #container {
+            height: 450px;
+        }
+
+        .pic {
+            width: 50%;
+            height: 50%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .highcharts-data-table table, .dataTable no-footer {
+            font-family: Verdana, sans-serif;
+            border-collapse: collapse;
+            border: 1px solid #EBEBEB;
+            margin: 10px auto;
+            text-align: center;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .highcharts-data-table caption {
+            padding: 1em 0;
+            font-size: 1.2em;
+            color: #555;
+        }
+
+        .highcharts-data-table th {
+            font-weight: 600;
+            padding: 0.5em;
+        }
+
+        .highcharts-data-table td, .highcharts-data-table th, .highcharts-data-table caption, .dataTable no-footer {
+            padding: 0.5em;
+        }
+
+        .highcharts-data-table thead tr, .highcharts-data-table tr:nth-child(even), tr.even, .dataTable no-footer {
+            font-size: 0.2em;
+        }
+
+        .highcharts-data-table tr:hover, tr.odd, .dataTables_filter, .dataTables_length, .dataTables_info {
+            font-size: 0.2em;
+        }
+
+
+        #table-brands_next, #table-brands_previous, .paginate_button {
+            font-size: 0.2em;
+        }
+
+        .paginate_button {
+            font-size: 0.2em;
+            color: #555;
+            padding: 0.5em;
+        }
+    </style>
+
+
+}
